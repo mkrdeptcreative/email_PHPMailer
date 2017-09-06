@@ -28,9 +28,9 @@ if(isset($_POST['name'], $_POST['email'], $_POST['comment'])) {
 		//use your SMTP details here
 
 		$m->SMTPDebug = 1;
-		$m ->Host = "a2plcpnl0866.prod.iad2.secureserver.net";
-		$m->Username = 'chris_johnson@substyleprod.com';
-		$m->Password = '12KeND56Ra';
+		$m ->Host = //host address;
+		$m->Username = //email address;
+		$m->Password = //db password;
 		$m->SMTPSecure = 'ssl';
 		$m ->IsHTML(true);
 		$m->Port = 465;
@@ -40,7 +40,7 @@ if(isset($_POST['name'], $_POST['email'], $_POST['comment'])) {
 
 		$m->FromName = 'Contact';
 
-		$m->AddAddress('chris_johnson@substyleprod.com', 'Chris Johnson');
+		$m->AddAddress(//email address, name );
 
 		if($m->send()) {
 			header('Location: thanks.php');
